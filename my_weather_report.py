@@ -1,10 +1,12 @@
 city = input("What city are you in?: ")
 temp = float(input("What is the temperature today?: "))
 
-if temp > 35:
+if temp < 50:
     print("Warning: Heat alert")
-elif temp < 35:
+elif temp < 30:
     print("The weather outside is perfect")
+elif temp < 20:
+    print("Warning: Cold alert")
 
 
 import datetime
