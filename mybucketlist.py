@@ -1,0 +1,30 @@
+file = open('my_bucketlist.txt', 'w')
+file.write('1. Skydive')
+file.write('\n2. Spearfish a Giant Trevaly')
+file.write('\n3. Go to NASA HQ')
+file.write('\n4. Sit in a combat jet')
+file.close()
+print('Bucket list is saved')
+
+
+file = open('my_bucketlist.txt', 'r')
+reader = file.read()
+print("My bucket list (partial):")
+print(reader)
+
+file = open('my_bucketlist.txt', 'r')
+reader = file.readlines()
+print(f'There are {len(reader)} items on my bucket list (partial)')
+file.close()
+
+file = open('my_bucketlist.txt', 'a')
+file.write('\n5. Vist the himalayan monks and live like them for a month')
+file.write('\n6. Forge a dagger or a sword')
+file.close()
+print('\nBucket list (less partial) is now updated')
+
+file = open('my_bucketlist.txt', 'r')
+reader = file.read()
+print(file.read())
+print("My Updated bucket list (less partial):")
+print(reader)
